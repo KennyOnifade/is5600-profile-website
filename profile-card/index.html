@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+        content="Kehinde Onifade's responsive, interactive profile card.">
+
+  <title>Kehinde Onifade | Interactive Profile Card</title>
+
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <main class="page">
+    <h1>My Interactive Profile Card</h1>
+
+    <article class="profile-card" aria-labelledby="profile-name">
+      <div class="profile-image">
+        <img
+          src="../images/OmoJesu.jpg"
+          alt="Portrait of Kehinde Oluwaseye Onifade"
+          width="180"
+          height="180">
+      </div>
+
+      <div class="profile-info">
+        <p class="profile-label">Education • Cloud • Technology</p>
+
+        <h2 id="profile-name">Kehinde Oluwaseye Onifade</h2>
+
+        <p id="profile-title" class="profile-title">
+          Mathematics Educator | Information Systems Graduate Student
+        </p>
+
+        <p class="bio">
+          I am a mathematics educator studying Information Systems at
+          Saint Louis University. I enjoy exploring cloud computing,
+          data analytics, and practical technology solutions for
+          education and healthcare.
+        </p>
+
+        <p>
+          <strong>Interest:</strong>
+          <span id="interest" aria-live="polite">Cloud computing</span>
+        </p>
+
+        <p>
+          <strong>Profile views:</strong>
+          <span id="view-count" aria-live="polite">0</span>
+        </p>
+
+        <div class="card-actions">
+          <button id="interest-button" type="button">
+            Show a Random Interest
+          </button>
+
+          <button id="view-button" type="button">
+            Add a Profile View
+          </button>
+        </div>
+
+        <a href="https://dev.to/kehindeonifade">
+          Read My Technical Articles
+        </a>
+      </div>
+    </article>
+
+    <section class="editor" aria-labelledby="editor-heading">
+      <h2 id="editor-heading">Update the Card</h2>
+
+      <form id="profile-form">
+        <div class="form-field">
+          <label for="name-input">Name</label>
+          <input
+            id="name-input"
+            name="name"
+            type="text"
+            autocomplete="name"
+            required>
+        </div>
+
+        <div class="form-field">
+          <label for="title-input">Professional title</label>
+          <input
+            id="title-input"
+            name="title"
+            type="text"
+            required>
+        </div>
+
+        <button type="submit">Update Profile</button>
+
+        <p id="form-message" role="status"></p>
+      </form>
+    </section>
+  </main>
+</body>
+</html>
